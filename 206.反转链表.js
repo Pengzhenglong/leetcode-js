@@ -14,7 +14,8 @@ var reverseList = function (head) {
     // curr=next;
     // es6解构数组
     [curr.next,prev,curr]=[prev,curr,curr.next]
-    // [prev,curr.next,curr]=[curr,prev,curr.next]
+    [prev,curr.next,curr]=[curr,prev,curr.next]
+    [curr,prev,curr.next]=[curr.next,curr,prev]
   }
   return  prev; 
 }
