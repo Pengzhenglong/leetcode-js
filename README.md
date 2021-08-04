@@ -23,3 +23,23 @@ function bubbleSort(arr) {
   return arr
 }
 ```
+
+### 斐波那契数列
+
+题目分析，斐波那契数列公式为：f[n]= f[n-1] +f[n-2] ,初始值为f[0]=0,f[1]=1,目标求f[n]
+
+#### 方法一:递归
+
+```
+function  Fibonacci(n){
+  if(n===0||n===1){
+    return  n 
+  }
+  return   Fibonacci(n-1)+Fibonacci(n-2)
+}
+
+module.exports={
+  Fibonacci 
+}
+
+```
