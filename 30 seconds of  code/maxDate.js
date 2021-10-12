@@ -16,4 +16,4 @@ const dates = [
 ];
 maxDate(...dates); // 2018-03-11T22:00:00.000Z
 
-// console.log(maxDate(...dates));
+console.log(maxDate(...dates));
