@@ -41,7 +41,7 @@ var lengthOfLongestSubstring = function (s) {
   }
   for (i = 0; i < s.length; i++) {
 
-    
+
     if (!set.has(s[i])) {
       set.add(s[i])
 
