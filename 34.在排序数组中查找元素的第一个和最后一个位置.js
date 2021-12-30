@@ -11,13 +11,16 @@
  * @return {number[]}
  */
 
+
+// 取巧的方法，利用js的indexOf的特性，lastIndexOf的特性
+// 一行代码解决
+// return [nums.indexOf(target), nums.lastIndexOf(target)]
+
 //  方法1:先二分，在寻找左右边界
 //  思路：二分查找，然后向左和向右尝试找相同的元素
 //  复杂度：时间复杂度O(n)，空间复杂度O(1)
 //nums = [5,7,7,8,8,10], target = 8
 
-// 一行代码解决
-// return [nums.indexOf(target), nums.lastIndexOf(target)]
 
 
 var searchRange = function (nums, target) {
