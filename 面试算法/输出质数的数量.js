@@ -1,4 +1,4 @@
-// 给定整数n，返回所有小于非负整数n的质数的数量。
+// 给定整数n，返回所有小于非负整数n的质数的数量。  超时了
 function countPrimes(n) {
   let count = 0;
   for (let i = 2; i < n; i++) {
@@ -19,3 +19,4 @@ function isPrime(n) {
   }
   return true;
 }
+// 优化
