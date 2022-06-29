@@ -27,9 +27,21 @@
 //   return ans === Number.MAX_VALUE ? 0 : ans;
 // };
 
-// 双指针
+// 双指针  滑动窗口
 var minSubArrayLen = function (target, nums) {
-
+  const length = nums.length;
+  let l = 0, r = 0, sum = 0;
+  let ans = Number.MAX_VALUE;
+  while (r < length) {
+    sum += nums[r]
+    while (sum >= target) {
+      ans = Math.min(ans, r - l + 1)
+      sum -= nums[l]
+      l++
+    }
+    r++;
+  }
+  return ans === Number.MAX_VALUE ? 0 : ans
 };
 // @lc code=end
 
