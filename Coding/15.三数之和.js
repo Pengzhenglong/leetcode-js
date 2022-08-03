@@ -62,7 +62,7 @@ var threeSum = function (nums) {
             start++;
           }
           while (start < end && nums[end] === nums[end + 1]) {
-            end++;
+            end--;
           }
         } else if (nums[i] + nums[start] + nums[end] < 0) {
           start++
