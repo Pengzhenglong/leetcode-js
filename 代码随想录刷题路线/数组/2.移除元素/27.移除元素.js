@@ -11,16 +11,16 @@
  * @return {number}
  */
 // 双指针法
-// var removeElement = function (nums, val) {
-//   var newIndex = 0;
-//   for (let i = 0; i < nums.length; i++) {
-//     if (nums[i] !== val) {
-//       nums[newIndex] = nums[i]
-//       newIndex++
-//     }
-//   }
-//   return newIndex;
-// };
+var removeElement = function (nums, val) {
+  var newIndex = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] !== val) {
+      nums[newIndex] = nums[i]
+      newIndex++
+    }
+  }
+  return newIndex;
+};
 // 暴力解法1  双重for循环
 var removeElement = function (nums, val) {
   let n = nums.length
