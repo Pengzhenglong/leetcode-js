@@ -10,11 +10,11 @@
  * @return {number[]}
  */
 // 暴力解法
-// var sortedSquares = function (nums) {
-//   const newArray = nums.map(item => item * item)
-//   newArray.sort((a, b) => a - b)
-//   return newArray
-// };
+var sortedSquares = function (nums) {
+  const newArray = nums.map(item => item * item)
+  newArray.sort((a, b) => a - b)
+  return newArray
+};
 // 双指针法
 var sortedSquares = function (nums) {
   let left = 0; let right = nums.length - 1;
