@@ -11,21 +11,21 @@
  * @return {number}
  */
 // 暴力解法，双重for循环
-// var minSubArrayLen = function (target, nums) {
-//   const length = nums.length;
-//   let ans = Number.MAX_VALUE;
-//   for (let i = 0; i < length; i++) {
-//     let sum = 0;
-//     for (let j = i; j < length; j++) {
-//       sum += nums[j]
-//       if (sum >= target) {
-//         ans = Math.min(ans, j - i + 1)
-//         break;
-//       }
-//     }
-//   }
-//   return ans === Number.MAX_VALUE ? 0 : ans;
-// };
+var minSubArrayLen = function (target, nums) {
+  const length = nums.length;
+  let ans = Number.MAX_VALUE;
+  for (let i = 0; i < length; i++) {
+    let sum = 0;
+    for (let j = i; j < length; j++) {
+      sum += nums[j]
+      if (sum >= target) {
+        ans = Math.min(ans, j - i + 1)
+        break;  //因为我们是找符合条件最短的子序列，所以一旦符合条件就break;
+      }
+    }
+  }
+  return ans === Number.MAX_VALUE ? 0 : ans;
+};
 
 // 双指针  滑动窗口
 var minSubArrayLen = function (target, nums) {
