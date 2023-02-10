@@ -17,18 +17,44 @@
  * @param {number} val
  * @return {ListNode}
  */
- var removeElements = function(head, val) {
-     const  ret = new  ListNode(0,head)
+var removeElements = function (head, val) {
+    const ret = new ListNode(0, head)
     // 赋值  复杂数据类型 指向同一个存储空间 无论哪个对象发生改变 其实都是改变堆中的数据
-     let  cur = ret;
-     while(cur.next){
-        if(cur.next.val===val){
-            cur.next=cur.next.next;
+    let cur = ret;
+    while (cur.next) {
+        if (cur.next.val === val) {
+            cur.next = cur.next.next;
             continue;
         }
-        cur= cur.next
-     }
-     return  ret.next
+        cur = cur.next
+    }
+    return ret.next
 };
 // @lc code=end
 
+var removeElements = function (head, val) {
+    let res = new ListNode(0, head);
+    let cur = res;
+    while (cur.next) {
+        if (cur.next.val === val) {
+            cur.next = cur.next.next;
+            continue;
+        }
+        cur = cur.next
+    }
+    return res.next;
+};
+
+var removeElements = function (head, val) {
+
+    let res = new ListNode(0, head);
+    let cur = res;
+    while (cur.next) {
+        if (cur.next.val === val) {
+            cur.next = cur.next.next;
+            continue;
+        }
+        cur = cur.next;
+    }
+    return res.next;
+};
