@@ -16,20 +16,6 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var reverseList = function (head) {
-    if (!head || !head.next) return head;
-    let temp = null, pre = null, cur = head;
-    while (cur) {
-        temp = cur.next;
-        cur.next = pre;
-        pre = cur;
-        cur = temp;
-    }
-    return pre;
-};
-// @lc code=end
-
-
 
 // 双指针：
 var reverseList = function (head) {
@@ -44,3 +30,17 @@ var reverseList = function (head) {
     // temp = cur = null;
     return pre;
 };
+
+
+// 递归
+
+var  reverse= function(pre,head){
+    if(!head)  return  pre;
+     const  temp=head.next;
+     head.next=pre;
+     pre=head;
+     return  reverse(pre,temp);
+}
+var  reverseList = function(head){
+     return  reverse(null,head);
+}
