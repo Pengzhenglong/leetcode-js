@@ -1,7 +1,10 @@
 var swapPairs = function(head) {
    let ret  = new  ListNode(0,head),temp=ret;
+   console.log(ret);
    while(temp.next&&temp.next.next){
     let  cur = temp.next.next,pre=temp.next;
+    console.log(cur);
+    console.log(pre);
     pre.next=cur.next;
     cur.next=pre;
     temp.next=cur;
@@ -9,6 +12,7 @@ var swapPairs = function(head) {
    }
    return  ret.next;
 };
+swapPairs([1,2,3,4]);
 
 var  swapPairs  = function(head){
     let  dummy = new  ListNode();
