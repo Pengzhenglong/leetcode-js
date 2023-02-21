@@ -1,5 +1,5 @@
 //bind实现要复杂一点  因为他考虑的情况比较多 还要涉及到参数合并(类似函数柯里化)
-Function.prototype.myBind = function (context, ...args) {
+Function.prototype.myBind = function _bind(context, ...args) {
     if (!context || context === null) {
       context = window;
     }
