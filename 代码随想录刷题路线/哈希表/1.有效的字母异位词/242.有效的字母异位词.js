@@ -25,3 +25,16 @@
 };
 // @lc code=end
 
+var isAnagram = function(s, t) {
+    if(s.length!==t.length) return false;
+    const  setArray = new  Array(26).fill(0);
+    const  base = 'a'.charCodeAt();
+     for(const  i of  s){
+      setArray[i.charCodeAt()-base]++;
+     }
+     for(const  i  of t){
+      if(!setArray[i.charCodeAt()-base])  return  false;
+         setArray[i.charCodeAt()-base]--;
+     }
+     return  true;
+};
