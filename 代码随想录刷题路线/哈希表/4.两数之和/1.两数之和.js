@@ -23,18 +23,20 @@
 //     return []
 // }
 //  obj key  value
-// var twoSum = function (nums, target) {
-//     let obj = {}
-//     for (let i = 0; i < nums.length; i++) {
-//         let cur = nums[i]
-//         if (cur in obj) {
-//             return [obj[cur], i]
-//         } else {
-//             obj[target - cur] = i;
-//         }
-//     }
-//     return []
-// }
+var twoSum = function (nums, target) {
+    let obj = {}
+    for (let i = 0; i < nums.length; i++) {
+        let cur = nums[i]
+        if (cur in obj) {
+            return [obj[cur], i]
+        } else {
+            obj[target - cur] = i;
+          
+        }
+          console.log(obj)
+    }
+    return []
+}
 //   map
 var twoSum = function (nums, target) {
     let map = new Map();

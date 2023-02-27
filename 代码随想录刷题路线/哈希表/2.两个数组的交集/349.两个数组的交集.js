@@ -25,14 +25,14 @@ var intersection = function(nums1, nums2) {
 var intersection = function(nums1, nums2) {
     let  nums1Set = new   Set(nums1);
     let  newSet = new Set();
-    console.log(nums2)
+    // console.log(nums2)
     for(let  i  of  nums2){
-      console.log(i)
+      // console.log(i)
       if(nums1Set.has(i)){
         newSet.add(i);
       }
     }
-    console.log(newSet);
+    // console.log(newSet);
     return  Array.from(newSet);
 };
 
